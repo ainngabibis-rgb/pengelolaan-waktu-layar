@@ -1,4 +1,4 @@
-# ⏳ FokusDigital - 
+# ⏳ FokusDigital -  
 
 Website edukasi dan pengelolaan waktu layar (*screen time*) untuk membantu pelajar mengurangi kecanduan gawai.
 
