@@ -1,4 +1,4 @@
-# ⏳ FokusDigital — Pusat Edukasi & Pengelolaan Waktu Layar (*Screen Time*)
+# ⏳ FokusDigital — Pusat Edukasi & Pengelolaan Waktu Layar (*Screen Time*) 
 
 Website edukasi dan pendampingan mandiri untuk membantu pelajar SMA mengelola waktu layar (*screen time*) secara sehat, yang dikembangkan sebagai proyek **PSAS Informatika TIK Kelas XI Semester Ganjil (Tahun Ajaran 2026/2027)**[cite: 1, 2].
 
