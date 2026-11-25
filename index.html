@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FokusDigital - Pusat Edukasi & Pengelolaan Waktu Layar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <header>
+        <div class="container navbar">
+            <h1 class="logo">⏳ FokusDigital</h1>
+            <nav>
+                <a href="#beranda">Beranda</a>
+                <a href="#dampak">Analisis Dampak</a>
+                <a href="#kalkulator">Kalkulator & Edukasi</a>
+                <a href="#simulasi-ai">Simulasi AI</a>
+                <a href="#komitmen">Komitmen</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero & Petunjuk Penggunaan -->
+    <section id="beranda" class="hero">
+        <div class="container">
+            <span class="badge">Proyek PSAS Informatika Kelas XI</span>
+            <h2>Kendalikan Layarmu, Raih Kembali Fokus Belajarmu</h2>
+            <p>Platform edukasi pengelolaan waktu layar (<em>screen time</em>) untuk membantu pelajar mengurangi kecanduan gawai dan menjaga kualitas tidur.</p>
+            <div class="guide-box">
+                <strong>Petunjuk Penggunaan Website:</strong>
+                <ol>
+                    <li>Baca bagian <strong>Analisis Dampak</strong> untuk memahami bahaya kecanduan layar.</li>
+                    <li>Hitung estimasi durasi penggunaan gawai Anda di <strong>Kalkulator Screen Time</strong>.</li>
+                    <li>Gunakan fitur <strong>Simulasi AI</strong> untuk menyusun jadwal detoks digital.</li>
+                    <li>Isi <strong>Formulir Komitmen</strong> agar target Anda tercatat di sistem Google Sheets.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analisis Dampak Sosial (Bobot 20%) -->
+    <section id="dampak" class="container section">
+        <h2>Analisis Dampak Sosial & Perumusan Masalah</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>🔍 Latar Belakang & Penyebab</h3>
+                <p>Tingginya durasi penggunaan media sosial dan gim pada remaja akibat fitur <em>infinite scroll</em> serta notifikasi beruntun yang memicu dopamin secara terus-menerus.</p>
+            </div>
+            <div class="card">
+                <h3>⚖️ Manfaat vs Risiko Teknologi</h3>
+                <p><strong>Manfaat:</strong> Mempermudah akses materi belajar dan hiburan instan.<br>
+                <strong>Risiko:</strong> Penurunan konsentrasi belajar, gangguan jam tidur (insomnia), kelelahan mata, dan berkurangnya interaksi sosial tatap muka.</p>
+            </div>
+            <div class="card">
+                <h3>🎯 Sasaran & Tujuan Solusi</h3>
+                <p><strong>Sasaran Pengguna:</strong> Pelajar SMA dan orang tua.<br>
+                <strong>Tujuan:</strong> Menyediakan alat ukur mandiri (kalkulator), edukasi teknik fokus, dan pencatatan komitmen pengurangan waktu layar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalkulator Screen Time & Edukasi Pomodoro -->
+    <section id="kalkulator" class="section bg-light">
+        <div class="container">
+            <h2>Kalkulator Screen Time & Teknik Fokus</h2>
+            <div class="grid-2">
+                <!-- Kalkulator -->
+                <div class="card">
+                    <h3>📱 Hitung Waktu Layar Non-Belajar</h3>
+                    <div class="form-group">
+                        <label for="jamMedsos">Media Sosial (Jam/Hari):</label>
+                        <input type="number" id="jamMedsos" min="0" max="24" step="0.5" value="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="jamGame">Gim & Video Hiburan (Jam/Hari):</label>
+                        <input type="number" id="jamGame" min="0" max="24" step="0.5" value="2">
+                    </div>
+                    <button type="button" class="btn" onclick="hitungScreenTime()">Hitung Analisis</button>
+                    <div id="hasilKalkulator" class="result-box hidden"></div>
+                </div>
+
+                <!-- Edukasi -->
+                <div class="card">
+                    <h3>🍅 Teknik Fokus Pomodoro & Aturan 20-20-20</h3>
+                    <ul class="edu-list">
+                        <li><strong>Teknik Pomodoro:</strong> Belajar fokus selama <strong>25 menit</strong> tanpa menyentuh ponsel, lalu istirahat <strong>5 menit</strong>. Ulangi hingga 4 siklus.</li>
+                        <li><strong>Aturan Mata 20-20-20:</strong> Setiap <strong>20 menit</strong> menatap layar, alihkan pandangan ke objek berjarak <strong>20 kaki</strong> (6 meter) selama <strong>20 detik</strong>.</li>
+                        <li><strong>Zona Bebas Gawai:</strong> Matikan notifikasi dan letakkan ponsel di luar jangkauan kasur 1 jam sebelum tidur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pemanfaatan & Simulasi AI (Bobot 10%) -->
+    <section id="simulasi-ai" class="container section">
+        <h2>Asisten Jadwal Detoks Digital</h2>
+        <div class="simulasi-banner">
+            ⚠️ <strong>LABEL SIMULASI PROTOTIPE AI:</strong> Fitur di bawah ini merupakan simulasi berbasis logika aturan (<em>rule-based prototype</em>) yang meniru cara kerja asisten AI dalam menyusun rekomendasi jadwal belajar, bukan koneksi API AI secara langsung.
+        </div>
+        <div class="card max-600">
+            <div class="form-group">
+                <label for="kendalaUtama">Pilih Kendala Terbesarmu Saat Belajar:</label>
+                <select id="kendalaUtama">
+                    <option value="notif">Sering tergoda membuka notifikasi chat/medsos</option>
+                    <option value="begadang">Sering begadang karena scroll video pendek</option>
+                    <option value="game">Sulit berhenti bermain gim setelah pulang sekolah</option>
+                </select>
+            </div>
+            <button type="button" class="btn" onclick="generateRekomendasiAI()">Buat Rekomendasi Jadwal (Simulasi)</button>
+            <div id="outputAI" class="result-box hidden"></div>
+        </div>
+    </section>
+
+    <!-- Formulir Komitmen (Integrasi Google Apps Script & Sheets) -->
+    <section id="komitmen" class="section bg-light">
+        <div class="container">
+            <h2>Formulir Komitmen Pengurangan Waktu Layar</h2>
+            <p class="subtitle">Gunakan data contoh/samaran saat menguji formulir. Data terhubung ke Google Sheets melalui Google Apps Script.</p>
+            <form id="komitmenForm" class="card max-600">
+                <div class="form-group">
+                    <label for="nama">Nama / Inisial Siswa:</label>
+                    <input type="text" id="nama" required placeholder="Contoh: Siswa XI-A / Budi">
+                </div>
+                <div class="form-group">
+                    <label for="targetJam">Target Maksimal Hiburan Layar (Jam/Hari):</label>
+                    <input type="number" id="targetJam" min="1" max="10" required placeholder="Contoh: 2">
+                </div>
+                <div class="form-group">
+                    <label for="langkahKomitmen">Langkah Nyata yang Akan Dilakukan:</label>
+                    <textarea id="langkahKomitmen" rows="3" required placeholder="Contoh: Menonaktifkan notifikasi Instagram saat jam belajar malam"></textarea>
+                </div>
+                <button type="submit" class="btn">Simpan Komitmen ke Sheets</button>
+                <div id="formStatus" class="status-msg hidden"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FokusDigital | Proyek PSAS Informatika TIK Kelas XI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
